@@ -1,7 +1,5 @@
 package br.alura.conversormoeda.api.key;
 
-import br.alura.conversormoeda.model.Conversion;
-
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;

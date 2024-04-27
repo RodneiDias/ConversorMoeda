@@ -1,14 +1,14 @@
 package br.alura.conversormoeda.util;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
 import java.io.IOException;
-
-import java.util.logging.*;
+import java.util.logging.FileHandler;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import java.util.logging.SimpleFormatter;
 
 public class Log {
     private final static Logger LOGGER = Logger.getLogger(Log.class.getName());
-    private static final String FILE_PATH = "conversor_log.txt";
+    private static final String FILE_PATH = "conversorlog.txt";
     static {
         try {
             FileHandler fileHandler = new FileHandler(FILE_PATH, true);

@@ -2,8 +2,6 @@ package br.alura.conversormoeda.util;
 
 import br.alura.conversormoeda.model.Conversion;
 import br.alura.conversormoeda.api.request.ExchangeRateApi;
-import br.alura.conversormoeda.principal.Main;
-
 import java.io.IOException;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -19,9 +17,9 @@ public class CurrencyConverter {
     private final List<Conversion> history = new ArrayList<>();
 
     public void start() throws IOException {
-        LOGGER.info("Iniciando a interação com usuário.");
+        //LOGGER.info("Iniciando a interação com usuário.");
         UserInput userInput = new UserInput();
-        // Mostra o po painel de entrada da aplicação
+        // Mostra o painel de entrada da aplicação, mas vai receber outra função em breve por isso o nome CurrencyType
         String currencyType = userInput.getCurrencyType();
 
         // Solicitar ao usuário a moeda base
@@ -36,11 +34,11 @@ public class CurrencyConverter {
 
         // Converter e imprimir o resultado da conversão
         convertAndPrint(userInput);
-        LOGGER.info("Dados de entrada processados e devolvidos.");
+        //LOGGER.info("Dados de entrada processados e devolvidos.");
     }
 
     private void convertAndPrint(UserInput userInput) throws IOException {
-        LOGGER.info("Iniciando a conversão.");
+        //LOGGER.info("Iniciando a conversão.");
         double amountInBaseCurrency = userInput.getAmount(baseCode);
         double exchangeRate = exchangeRates.get(targetCurrency);
         double convertedAmount = amountInBaseCurrency * exchangeRate;
@@ -50,6 +48,6 @@ public class CurrencyConverter {
         Conversion conversion = new Conversion(baseCode, targetCurrency, amountInBaseCurrency, convertedAmount, LocalDateTime.now());
         history.add(conversion);
         Historico.addHistorico(conversion);
-        System.out.println(history);
+        //System.out.println(history);
     }
 }

@@ -13,13 +13,13 @@ public class Conversion {
     private final LocalDateTime timestamp;
 
     public Conversion(String baseCurrency, String targetCurrency, double originalAmount, double convertedAmount, LocalDateTime timestamp) {
-        LOGGER.info("Iniciou a conversão");
+        //LOGGER.info("Iniciou a conversão");
         this.baseCurrency = baseCurrency;
         this.targetCurrency = targetCurrency;
         this.originalAmount = originalAmount;
         this.convertedAmount = convertedAmount;
         this.timestamp = timestamp;
-        LOGGER.info("Finalizando a conversão");
+       // LOGGER.info("Finalizando a conversão");
     }
 
     public String getBaseCurrency() {

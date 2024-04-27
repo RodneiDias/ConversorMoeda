@@ -1,6 +1,5 @@
 package br.alura.conversormoeda.api.request;
 
-import br.alura.conversormoeda.api.response.ExchangeRatesResponse;
 import br.alura.conversormoeda.api.key.ApiKey;
 import java.net.HttpURLConnection;
 import java.io.InputStreamReader;
@@ -25,7 +24,7 @@ public class ExchangeRateApi {
 
     public Map<String, Double> getExchangeRates () throws IOException {
         try {
-            LOGGER.info("Iniciando a conexão com a Api ExchangeRate");
+            //LOGGER.info("Iniciando a conexão com a Api ExchangeRate");
 
             String API_KEY = ApiKey.readApiKey(currencyType);
             String apiUrl = currencyType.equals("convencional")
@@ -51,7 +50,7 @@ public class ExchangeRateApi {
             return exchangeRatesResponse.getRates();
 
         } catch (IOException e) {
-            LOGGER.log(Level.SEVERE,"Erro com a conexão da API: ", e.getMessage());
+            LOGGER.log(Level.ALL,"Erro com a conexão da API: ", e.getMessage());
             throw new RuntimeException("Erro com a conexão da API: " + e.getMessage(), e);
 
         }
