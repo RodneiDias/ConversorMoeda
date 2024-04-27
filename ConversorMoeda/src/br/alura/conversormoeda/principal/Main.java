@@ -1,19 +1,23 @@
 package br.alura.conversormoeda.principal;
 
 import br.alura.conversormoeda.util.CurrencyConverter;
-import br.alura.conversormoeda.util.Log;
 import java.io.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 
 public class Main {
+    private final static Logger LOGGER = Logger.getLogger(Main.class.getName());
+
     public static void main(String[] args) {
         try {
-            // Instanciamos a classe CurrencyConverter e iniciamos o processo de conversão
+            //LOGGER.info("Iniciando a aplicação e o processo de conversão.");
             CurrencyConverter converter = new CurrencyConverter();
             converter.start();
-
         } catch (IOException e) {
-            Log.addLog(e.getMessage());
-            System.out.println("Erro ao iniciar o conversor de moedas: " + e.getMessage());
+            LOGGER.log(Level.FINEST, "Erro ao iniciar o conversor de moedas: " + e.getMessage());
         }
+           //LOGGER.info("Finalizando a aplicação");
     }
 }
+

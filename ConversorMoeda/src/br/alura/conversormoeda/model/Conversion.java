@@ -2,8 +2,10 @@ package br.alura.conversormoeda.model;
 
 import java.text.DecimalFormat;
 import java.time.LocalDateTime;
+import java.util.logging.Logger;
 
 public class Conversion {
+    private final static Logger LOGGER = Logger.getLogger(Conversion.class.getName());
     private final String baseCurrency;
     private final String targetCurrency;
     private final double originalAmount;
@@ -11,11 +13,13 @@ public class Conversion {
     private final LocalDateTime timestamp;
 
     public Conversion(String baseCurrency, String targetCurrency, double originalAmount, double convertedAmount, LocalDateTime timestamp) {
+        //LOGGER.info("Iniciou a conversão");
         this.baseCurrency = baseCurrency;
         this.targetCurrency = targetCurrency;
         this.originalAmount = originalAmount;
         this.convertedAmount = convertedAmount;
         this.timestamp = timestamp;
+       // LOGGER.info("Finalizando a conversão");
     }
 
     public String getBaseCurrency() {
