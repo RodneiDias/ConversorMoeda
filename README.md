@@ -7,9 +7,9 @@ O Conversor de Moedas é uma aplicação simples que permite converter valores e
 - Conversão de valores entre moedas convencionais (por exemplo, USD, EUR, BRL).
 - Gera um arquivo .txt com Histórico de conversões realizado.
 - Gera um arquivo .txt com log de erro.
-- Em processo de implantação: Opção para visualizar o historico na tela do terminal
+- Em processo de implantação: Opção para visualizar o historico na tela do terminal.
 - Em processo de implantação: Conversão de valores entre criptomoedas (por exemplo, Bitcoin, Ethereum, Litecoin).
-- 
+  
 ## Como Usar
 
 1. Crie uma conta gratuita em [ExchangeRate-API](https://www.exchangerate-api.com/) para obter sua chave de API.
@@ -28,7 +28,7 @@ git clone https://github.com/RodneiDias/conversor-de-moedas.git
 
 ## Dependências
 
-- Java 17 ou superior.
+- Java 8 ou superior.
 
 ## Autor
 
