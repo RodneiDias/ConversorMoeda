@@ -1,14 +1,15 @@
 # Conversor de Moedas
 
-O Conversor de Moedas é uma aplicação simples que permite converter valores entre diferentes moedas, utilizando taxas de câmbio atualizadas da API [ExchangeRate-API](https://www.exchangerate-api.com/).
+O Conversor de Moedas é uma aplicação simples que permite converter valores entre diferentes moedas usando seu códigode referência, utilizando taxas de câmbio atualizadas da API [ExchangeRate-API](https://www.exchangerate-api.com/).
 
 ## Funcionalidades
 
 - Conversão de valores entre moedas convencionais (por exemplo, USD, EUR, BRL).
-- Conversão de valores entre criptomoedas (por exemplo, Bitcoin, Ethereum, Litecoin).
 - Gera um arquivo .txt com Histórico de conversões realizado.
-- Gera um arquivo .txt com Log de erros.
-
+- Gera um arquivo .txt com log de erro.
+- Em processo de implantação: Opção para visualizar o historico na tela do terminal.
+- Em processo de implantação: Conversão de valores entre criptomoedas (por exemplo, Bitcoin, Ethereum, Litecoin).
+  
 ## Como Usar
 
 1. Crie uma conta gratuita em [ExchangeRate-API](https://www.exchangerate-api.com/) para obter sua chave de API.
@@ -17,7 +18,7 @@ O Conversor de Moedas é uma aplicação simples que permite converter valores e
 
 git clone https://github.com/RodneiDias/conversor-de-moedas.git
 
-3. Crie um arquivo chamado `api_keyExchange.txt` na raiz do projeto e insira sua chave de API obtida na etapa 1.
+3. Coloque a sua chave de API obtida na etapa 1 detro do arquivo `api_keyExchange.txt` na raiz do projeto. 
 
 4. Abra o projeto em sua IDE favorita.
 
